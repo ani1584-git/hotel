@@ -1,8 +1,12 @@
+console.log("🚀 Server is starting...");
+
+
+import dotenv from 'dotenv'
 import express from 'express'
 import './connection.js'
 import mongoose from 'mongoose'
-import dotenv from 'dotenv'
 
+dotenv.config();
 
 const app=express()
 
@@ -18,7 +22,8 @@ app.use('/menuitem',menuitemRoutes)
 
 
 
-app.listen(3001,()=>{
-    console.log("server invoked at http://localhost:3001")
-})
+app.listen(PORT, () => {
+  console.log(`✅ Server is running on port ${PORT}`);
+});
+
 //hii
