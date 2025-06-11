@@ -27,10 +27,10 @@ app.get('/',function(req,res){
   res.send('Welcome to hotel')
 })
 
+app.use(express.json());
+
 import personRoutes from './routes/personRoutes.js'
 import  menuitemRoutes from './routes/menuitemRoutes.js'
-
-app.use(express.json());
 
 
 app.use('/person',localAuthMiddleware,personRoutes)
