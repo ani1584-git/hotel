@@ -33,7 +33,7 @@ import personRoutes from './routes/personRoutes.js'
 import  menuitemRoutes from './routes/menuitemRoutes.js'
 
 
-app.use('/person',localAuthMiddleware,personRoutes)
+app.use('/person',personRoutes)
 app.use('/menuitem',menuitemRoutes)
 
 
